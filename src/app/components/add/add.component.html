@@ -1,0 +1,59 @@
+<div class="card flex-shrink-0 w-full max-w-sm mx-auto shadow-2xl bg-base-100 p-4">
+
+    <div class="top-bar text-center">
+        <h1 class="text-3xl">New Employee</h1>
+    </div>
+
+    <div class="card-body">
+        <form [formGroup]="addForm">
+
+            <div class="form-control">
+                <label class="label">
+                    <h3 class="label-text">Full Name <span class="text-red-500">*</span></h3>
+                </label>
+                <input id="fullname" type="text" class="input input-bordered" formControlName="fullname" autocomplete="off"/>
+            </div>
+
+            <div class="form-control">
+                <label class="label">
+                    <h3 class="label-text">Profile Picture <span class="text-red-500">(optional)</span></h3>
+                </label>
+                <input id="profilePic" type="text" class="input input-bordered" formControlName="profilepic" autocomplete="off"/>
+            </div>
+
+            <div class="form-control">
+                <label class="label">
+                    <h3 class="label-text">Job Title <span class="text-red-500">*</span> </h3>
+                </label>
+                <input id="jobtitle" type="text" class="input input-bordered" formControlName="jobtitle" autocomplete="off"/>
+            </div>
+
+            <div class="form-control">
+                <label class="label">
+                    <h3 class="label-text">Email <span class="text-red-500">*</span></h3>
+                </label>
+                <input id="email" type="email" class="input input-bordered" formControlName="email" autocomplete="off"/>
+            </div>
+
+            <div class="form-control">
+                <label class="label">
+                    <h3 class="label-text">Phone Number <span class="text-red-500">*</span></h3>
+                </label>
+                <input id="phonenumber" type="text" class="input input-bordered" formControlName="phonenumber" autocomplete="off"/>
+            </div>
+
+            <div class="form-control">
+                <label class="label">
+                    <h3 class="label-text">Department <span class="text-red-500">*</span></h3>
+                </label>
+                <input id="department" type="text" class="input input-bordered" formControlName="department" autocomplete="off"/>
+            </div>
+
+            <div class="form-control flex justify-between flex-row mt-6">
+                <button class="btn btn-active btn-accent w-20" [routerLink]="['/home']">Back</button>
+                <button class="btn btn-primary w-fit" (click)="AddEmployee()">Add Employee</button>
+            </div>
+        </form>
+
+    </div>
+</div>
