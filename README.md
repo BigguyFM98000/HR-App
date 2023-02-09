@@ -15,10 +15,3 @@ Its an application for adding and managing information about new employees in a 
 1. NodeJS - For connecting to the hosted MongoDB database.
 2. JavaScript - For writing the logic of the Backend API.
 3. MongoDB - To store data on Documents which are different from SQL tables and I used MongoDB Atlas since is hosted already as my intention is to host the application online as well.
-
-## Instructions for running  a cloned repository of the project
-1. Run "npm i" on the terminal.
-2. Navigate to the HR_APP folder on the terminal by "cd HR_APP" and when you have cheanged directory, execute "ng s -o". N.B, "-o" will open the application in your default web browser.
-3. Also, Navigate to the Backend folder using "cd Backend" and the execute "npm start" once the terminal has changed directory to Backend folder.
-
-
