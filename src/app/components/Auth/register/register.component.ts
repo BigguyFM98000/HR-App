@@ -1,17 +1,5 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ElementRef,
-  AfterViewInit,
-  Renderer2,
-} from "@angular/core";
-import {
-  FormControl,
-  FormGroup,
-  Validators,
-  FormBuilder,
-} from "@angular/forms";
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: "app-register",
@@ -21,37 +9,45 @@ import {
 export class RegisterComponent implements OnInit {
   passwordType: any = "password";
   submitted = false;
-  registerForm:FormGroup = this.formBuilder.group({
-    firstname: ["", Validators.required],
-    lastname: ["", Validators.required],
-    email: ["", [Validators.required, Validators.email]],
-    password: ["", [Validators.required, Validators.minLength(6)]],
-  });;
-
+  form: FormGroup;
+  
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-   
+    this.form = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      
+    });
     
   }
 
-  // convenience getter for easy access to form fields
-  get f() { return this.registerForm.controls; }
-
   show() {
-    if ((this.passwordType = "password")) {
+    if (this.passwordType = "password") {
       this.passwordType = "text";
     }
   }
 
   hide() {
-    if ((this.passwordType = "text")) {
+    if (this.passwordType = "text") {
       this.passwordType = "password";
     }
   }
 
-  signUp() {
+  onSubmit() {
     this.submitted = true;
-    console.log(JSON.stringify(this.registerForm.value, null, 4));
+
+    if (this.form.invalid) {
+      return;
+    }
+   
+  }
+
+  // convenience getter for easy access to form fields
+    get f() { return this.form.controls; }
+
+
+  resetForm(){
+    this.submitted = false;
+    this.form.reset();
   }
 }

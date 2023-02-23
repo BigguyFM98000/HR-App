@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { EditComponent } from './components/edit/edit.component';
 import { AddComponent } from './components/add/add.component';
-import { ViewComponent } from './components/view/view.component';
+// import { ViewComponent } from './components/view/view.component';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { SearchPipe } from '../pipes/search.pipe';
@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TestComponent } from './components/test/test.component';
 import { RegisterComponent } from './components/Auth/register/register.component';
 import { LoginComponent } from './components/Auth/login/login.component';
+import { ViewComponent } from './components/view/view.component';
 
 @NgModule({
   declarations: [

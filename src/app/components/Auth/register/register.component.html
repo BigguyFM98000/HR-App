@@ -5,28 +5,35 @@
   >
     <div class="bg-slate-300 px-6 py-8 rounded shadow-md text-white w-full">
       <h1 class="mb-8 text-3xl text-center text-black">Sign up</h1>
-      <form [formGroup]="registerForm" >
-        <input id="firstname"
+      <form [formGroup]="form" (onsubmit)="onSubmit()">
+        <input
+          id="firstname"
           type="text"
           class="form-control block border border-grey-light w-full p-3 rounded mb-4"
           name="firstname"
           placeholder="Firstname"
           formControlName="firstname"
         />
-        <input id="lastname"
+        <input
+          id="lastname"
           type="text"
           class="form-control block border border-grey-light w-full p-3 rounded mb-4"
           name="lastname"
           placeholder="Lastname"
           formControlName="lastname"
         />
-        <input id="email"
-          type="text"
-          class="form-control block border border-grey-light w-full p-3 rounded mb-4"
-          name="email"
-          placeholder="Email"
-          formControlName="email"
-        />
+
+        <div class="form-group">
+          <input
+            id="email"
+            type="text"
+            class="form-control block border border-grey-light w-full p-3 rounded mb-4"
+            name="email"
+            placeholder="Email"
+            formControlName="email"
+          />
+        </div>
+
         <input
           id="myInput"
           type="{{ passwordType }}"
@@ -46,37 +53,27 @@
             <label for="hide">Hide Password</label>
           </div>
         </div>
-        <button
-          type="submit"
-          class="w-full text-center py-3 rounded bg-green-600 text-white hover:bg-green-dark focus:outline-none my-8"
-          (click)="signUp()"
-        >
-          Create Account
-        </button>
-        <!-- <div class="text-center text-sm text-grey-dark mt-4">
-          By signing up, you agree to the
-          <a
-            class="no-underline border-b border-grey-dark text-grey-dark"
-            href="#"
+        <div class="flex justify-evenly gap-4">
+          <button
+            type="submit"
+            class="w-64 text-center py-3 rounded bg-green-600 text-white hover:bg-green-dark focus:outline-none my-8"
           >
-            Terms of Service
-          </a>
-          and
-          <a
-            class="no-underline border-b border-grey-dark text-grey-dark"
-            href="#"
+            Create Account
+          </button>
+          <button
+            type="reset"
+            class="w-64 text-center py-3 rounded bg-rose-900 text-white hover:bg-green-dark focus:outline-none my-8"
+            
           >
-            Privacy Policy
-          </a>
-        </div> -->
+            Reset
+          </button>
+        </div>
       </form>
     </div>
 
     <div class="text-grey-dark mt-6">
-      Already have an account?
-      <a class="no-underline border-b border-blue text-blue" href="../login/">
-        Log in </a
-      >.
-    </div>
+        Already have an account?
+        <a routerLink="/login" class="no-underline border-b border-blue text-blue">Log in here</a>.
+      </div>
   </div>
 </div>
