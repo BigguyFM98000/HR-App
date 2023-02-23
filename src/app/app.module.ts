@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TestComponent } from './components/test/test.component';
+import { RegisterComponent } from './components/Auth/register/register.component';
+import { LoginComponent } from './components/Auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { TestComponent } from './components/test/test.component';
     ViewComponent,
     SearchPipe,
     NavbarComponent,
-    TestComponent
+    TestComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     RouterModule.forRoot([]),

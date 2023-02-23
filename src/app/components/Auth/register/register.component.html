@@ -1,0 +1,82 @@
+<!-- component -->
+<div class="bg-white min-h-screen flex flex-col">
+  <div
+    class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"
+  >
+    <div class="bg-slate-300 px-6 py-8 rounded shadow-md text-white w-full">
+      <h1 class="mb-8 text-3xl text-center text-black">Sign up</h1>
+      <form [formGroup]="registerForm" >
+        <input id="firstname"
+          type="text"
+          class="form-control block border border-grey-light w-full p-3 rounded mb-4"
+          name="firstname"
+          placeholder="Firstname"
+          formControlName="firstname"
+        />
+        <input id="lastname"
+          type="text"
+          class="form-control block border border-grey-light w-full p-3 rounded mb-4"
+          name="lastname"
+          placeholder="Lastname"
+          formControlName="lastname"
+        />
+        <input id="email"
+          type="text"
+          class="form-control block border border-grey-light w-full p-3 rounded mb-4"
+          name="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+        <input
+          id="myInput"
+          type="{{ passwordType }}"
+          class="form-control block border border-grey-light w-full p-3 rounded mb-4"
+          name="password"
+          placeholder="Password"
+          #password
+          formControlName="password"
+        />
+        <div class="flex justify-between">
+          <div>
+            <input type="radio" id="show" (click)="show()" name="option" />
+            <label for="show">Show Password</label>
+          </div>
+          <div>
+            <input type="radio" (click)="hide()" class="" name="option" />
+            <label for="hide">Hide Password</label>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="w-full text-center py-3 rounded bg-green-600 text-white hover:bg-green-dark focus:outline-none my-8"
+          (click)="signUp()"
+        >
+          Create Account
+        </button>
+        <!-- <div class="text-center text-sm text-grey-dark mt-4">
+          By signing up, you agree to the
+          <a
+            class="no-underline border-b border-grey-dark text-grey-dark"
+            href="#"
+          >
+            Terms of Service
+          </a>
+          and
+          <a
+            class="no-underline border-b border-grey-dark text-grey-dark"
+            href="#"
+          >
+            Privacy Policy
+          </a>
+        </div> -->
+      </form>
+    </div>
+
+    <div class="text-grey-dark mt-6">
+      Already have an account?
+      <a class="no-underline border-b border-blue text-blue" href="../login/">
+        Log in </a
+      >.
+    </div>
+  </div>
+</div>

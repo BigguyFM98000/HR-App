@@ -6,7 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ViewComponent } from './components/view/view.component';
 import { CommonModule } from '@angular/common';
 import { TestComponent } from './components/test/test.component';
-
+import { RegisterComponent } from './components/Auth/register/register.component';
 
 
 const routes: Routes = [
@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: "view/:id", component: ViewComponent},
   {path: "home", component: HomeComponent},
   {path: "test", component: TestComponent},
+  {path: "signup", component: RegisterComponent}
 ];
 
 @NgModule({

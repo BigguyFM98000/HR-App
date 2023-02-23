@@ -1,4 +1,4 @@
-<div class="flex flex-shrink-0 md:w-auto justify-between mt-2">
+<div class="flex flex-shrink-0 md:w-auto bg-white justify-between mt-2">
   <form class=" flex flex-shrink-0 md:w-auto flex-row search-hero" role="search">
     <input type="text" name="search" placeholder="Search" [(ngModel)]="searchText" autocomplete="off"
       class="input input-bordered w-full max-w-xs" />
@@ -10,11 +10,11 @@
   </div>
 </div>
 
-<div class="grid grid-rows-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 lg:grid-cols-3 gap-2 first-letter:justify-center justify-items-center" >
+<div class="grid bg-white grid-rows-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 lg:grid-cols-3 gap-1 first-letter:justify-center justify-items-center" >
 
-  <div class="card w-96 bg-primary text-primary-content mt-8" *ngFor="let employee of employees | Search:searchText | paginate:    { itemsPerPage: 6, currentPage: p }; let i = index" >
+  <div class="card w-80 bg-slate-300 shadow-xl text-primary-content mt-8" *ngFor="let employee of employees | Search:searchText | paginate:    { itemsPerPage: 6, currentPage: p }; let i = index" >
     <div class="card-body text-center">
-      <div class="flex justify-between align-baseline w-80 mb-3 h-62 lg:mb-0">
+      <div class="flex justify-start align-baseline w-80 gap-4 mb-3 h-62 lg:mb-0">
         <div class="avatar">
           <div class="mask mask-squircle w-12 h-12">
             <img src={{employee.profilepic}} *ngIf="employee.profilepic; else elseBlock"  
@@ -25,30 +25,30 @@
               [ngStyle]="{'background-color': circleColor[i]}"> <span class="relative">{{ employee.fullname[0].toUpperCase() }}</span></div>
           </ng-template>
         </div>
-        <span class="text-xl text-white-200">{{ employee.fullname }}</span>
+        <span class="text-lg h-62 text-white-200">{{ employee.fullname }}</span>
       </div>
       <div class="flex">
         <div class="flex items-center justify-between w-full min-w-0 ">
-          <span class="label-text text-xl text-black">Job Title:</span>
-          <span class="text-xl text-white-200">{{ employee.jobtitle }}</span>
+          <span class="label-text text-lg text-black">Job Title:</span>
+          <span class="text-lg text-white-200">{{ employee.jobtitle }}</span>
         </div>
       </div>
       <div class="flex">
         <div class="flex items-center justify-between w-full min-w-0 ">
-          <span class="label-text text-xl text-black">Email:</span>
-          <span class="text-xl text-white-200">{{ employee.email }}</span>
+          <span class="label-text text-lg text-black">Email:</span>
+          <span class="text-lg text-white-200">{{ employee.email }}</span>
         </div>
       </div>
       <div class="flex">
         <div class="flex items-center justify-between w-full min-w-0 ">
-          <span class="label-text text-xl text-black">Phone Number: </span>
-          <span class="text-xl text-white-200">0{{ employee.phonenumber }}</span>
+          <span class="label-text text-lg text-black">Phone Number: </span>
+          <span class="text-lg text-white-200">0{{ employee.phonenumber }}</span>
         </div>
       </div>
       <div class="flex">
         <div class="flex items-center justify-between w-full min-w-0 ">
-          <span class="label-text text-xl text-black">Department:</span>
-          <span class="text-xl text-white-200">{{ employee.department }}</span>
+          <span class="label-text text-lg text-black">Department:</span>
+          <span class="text-lg text-white-200">{{ employee.department }}</span>
         </div>
       </div>
 
