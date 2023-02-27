@@ -9,15 +9,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   passwordType: any = "password";
   submitted = false;
-  form: FormGroup;
+  form: FormGroup = this.formBuilder.group({
+    email: ['', [Validators.required, Validators.email]],
+    
+  });;
   
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      
-    });
+    this.form 
     
   }
 
