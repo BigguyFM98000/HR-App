@@ -13,7 +13,7 @@
 <div class="grid bg-white grid-rows-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 lg:grid-cols-4 gap-1 first-letter:justify-center justify-items-center" >
 
   <div class="card w-80 bg-blue-200 shadow-xl text-primary-content mt-8" *ngFor="let employee of employees | Search:searchText | paginate:    { itemsPerPage: 6, currentPage: p }; let i = index" >
-    <div class="card-body text-center">
+    <div class="card-body text-center flex justify-between">
       <div class="flex justify-start align-baseline w-80 gap-2 mb-3 h-62 lg:mb-0">
         <div class="avatar">
           <div class="mask mask-squircle w-12 h-12">
@@ -25,37 +25,37 @@
               [ngStyle]="{'background-color': circleColor[i]}"> <span class="relative">{{ employee.fullname[0].toUpperCase() }}</span></div>
           </ng-template>
         </div>
-        <span class="text-lg h-62 text-white-200">{{ employee.fullname }}</span>
+        <span class="text-lg h-62 text-black">{{ employee.fullname }}</span>
       </div>
       <div class="flex">
         <div class="flex items-center justify-between w-full min-w-0 ">
           <span class="label-text text-lg text-black">Job Title:</span>
-          <span class="text-lg text-white-900">{{ employee.jobtitle }}</span>
+          <span class="text-lg text-white-500">{{ employee.jobtitle }}</span>
         </div>
       </div>
       <div class="flex">
         <div class="flex items-center justify-between w-full min-w-0 ">
           <span class="label-text text-lg text-black">Email:</span>
-          <span class="text-lg text-white-200">{{ employee.email }}</span>
+          <span class="text-lg text-white-500">{{ employee.email }}</span>
         </div>
       </div>
       <div class="flex">
         <div class="flex items-center justify-between w-full min-w-0 ">
           <span class="label-text text-lg text-black">Phone Number: </span>
-          <span class="text-lg text-white-200">0{{ employee.phonenumber }}</span>
+          <span class="text-lg text-white-500">0{{ employee.phonenumber }}</span>
         </div>
       </div>
       <div class="flex">
         <div class="flex items-center justify-between w-full min-w-0 ">
           <span class="label-text text-lg text-black">Department:</span>
-          <span class="text-lg text-white-200">{{ employee.department }}</span>
+          <span class="text-lg text-white-500">{{ employee.department }}</span>
         </div>
       </div>
 
       <div class="card-actions justify-end">
-        <span class="mask mask-circle p-4 bg-green-300" (click)="viewCard(employee._id)"><i class="fa-solid fa-eye"></i></span>
-        <span class="mask mask-circle p-4 bg-yellow-300" (click)='edit(employee._id)'><i class="fa-solid fa-pen-to-square" ></i></span>
-        <span class="mask mask-circle p-4 bg-red-300" (click)="delete(employee._id)"><i class="fa-sharp fa-solid fa-trash"></i></span>
+        <span class="mask mask-circle p-4 bg-gray-400" (click)="viewCard(employee._id)"><i class="fa-solid fa-eye"></i></span>
+        <span class="mask mask-circle p-4 bg-gray-400" (click)='edit(employee._id)'><i class="fa-solid fa-pen-to-square" ></i></span>
+        <span class="mask mask-circle p-4 bg-gray-400" (click)="delete(employee._id)"><i class="fa-sharp fa-solid fa-trash"></i></span>
       </div>
     </div>
   </div>        
