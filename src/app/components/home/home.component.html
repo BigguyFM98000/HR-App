@@ -12,7 +12,7 @@
 
 <div class="grid bg-white grid-rows-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 lg:grid-cols-3 gap-1 first-letter:justify-center justify-items-center" >
 
-  <div class="card w-80 bg-slate-300 shadow-xl text-primary-content mt-8" *ngFor="let employee of employees | Search:searchText | paginate:    { itemsPerPage: 6, currentPage: p }; let i = index" >
+  <div class="card w-80 bg-slate-300 shadow-xl text-primary-content mt-8" *ngFor="let employee of employees | Search:searchText | paginate:    { itemsPerPage: 8, currentPage: p }; let i = index" >
     <div class="card-body text-center">
       <div class="flex justify-start align-baseline w-80 gap-4 mb-3 h-62 lg:mb-0">
         <div class="avatar">
