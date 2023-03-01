@@ -1,5 +1,5 @@
 
-<div class="card mx-auto flex-shrink-0 justify-center w-full max-w-sm shadow-2xl bg-base-100 p-4 bg-purple-100 m-4" >
+<div class="card mx-auto flex-shrink-0 justify-center w-full max-w-sm shadow-2xl p-4 bg-slate-200 m-4" >
     
         <div class="avatar">
             <div class="mask mask-squircle w-12 h-12 mx-auto">
@@ -18,7 +18,7 @@
         <div class="card-body">
             <div class="form-control">
                 <label class="label">
-                    <span class="label-text text-center badge badge-outline">Full Name</span>
+                    <span class="label-text text-white badge badge-outline bg-teal-500">Full Name</span>
                 </label>
                 <input type="text" class="input input-bordered"
                     [(ngModel)]="userUpdate.fullname" id="fullname"/>
@@ -26,7 +26,7 @@
 
             <div class="form-control">
                 <label class="label">
-                    <span class="label-text text-center badge badge-outline">Job Title</span>
+                    <span class="label-text text-white badge badge-outline bg-teal-500">Job Title</span>
                 </label>
                 <input type="text" class="input input-bordered"
                 [(ngModel)]="userUpdate.jobtitle" id="Job stitle"/>
@@ -42,7 +42,7 @@
 
             <div class="form-control">
                 <label class="label">
-                    <span class="label-text badge badge-outline">Phone Number</span>
+                    <span class="label-text text-white badge badge-outline bg-teal-500">Phone Number</span>
                 </label>
                 <input type="text" [(ngModel)]="userUpdate.phonenumber"
                      class="input input-bordered" id="phonenumber" />
@@ -50,14 +50,14 @@
 
             <div class="form-control">
                 <label class="label">
-                    <span class="label-text badge badge-outline">Department</span>
+                    <span class="label-text text-white badge badge-outline bg-teal-500">Department</span>
                 </label>
                 <input type="text" [(ngModel)]="userUpdate.department" class="input input-bordered" id="department" />
             </div>
 
             <div class="form-control flex justify-between flex-row mt-6">
                 <button class="btn btn-active btn-secondary w-20" routerLink='/home' (click)="clear()">Back</button>
-                <button type="submit" class="btn bg-blue-800 w-fit p-4" (click)="updateEmployee()">Update Details</button>
+                <button type="submit" class="btn bg-blue-500 w-fit p-4" (click)="updateEmployee()">Update Details</button>
             </div>
         </div>
   
