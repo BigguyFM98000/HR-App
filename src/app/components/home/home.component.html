@@ -1,4 +1,4 @@
-<div class="flex flex-shrink-0 md:w-auto bg-white justify-between mt-2">
+<div class="flex flex-shrink-0 md:w-auto bg-white justify-between m-2 ">
   <form class=" flex flex-shrink-0 md:w-auto flex-row search-hero" role="search">
     <input type="text" name="search" placeholder="Search" [(ngModel)]="searchText" autocomplete="off"
       class="input input-bordered w-full max-w-xs" />
@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<div class="grid bg-white grid-rows-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 lg:grid-cols-4 gap-1 first-letter:justify-center justify-items-center" >
+<div class="grid bg-white grid-https://github.com/BigguyFM1800/HR-App.gitrows-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 lg:grid-cols-4 gap-1 first-letter:justify-center justify-items-center" >
 
   <div class="card w-80 bg-blue-200 shadow-xl text-primary-content mt-8" *ngFor="let employee of employees | Search:searchText | paginate:    { itemsPerPage: 6, currentPage: p }; let i = index" >
     <div class="card-body text-center flex justify-between">
